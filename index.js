@@ -1,7 +1,9 @@
-/* const productos = [
+const productos = [
     {nombre:"porta celular", precio:50},
     {nombre:"cartera", precio:788},
-    {nombre:"mochila", precio:698},
+    {nombre:"mochila negra", precio:698},
+    {nombre:"mochila marron", precio:698},
+    {nombre:"llavero", precio:100},
     {nombre:"billetera", precio:874},
     {nombre:"sobre", precio:566},
     {nombre:"tarjetero", precio:500}
@@ -36,7 +38,7 @@ while(seleccion != "si" && seleccion != "no"){
                 case "cartera":
                     precio = 788;
                     break;
-                case "mochila":
+                case "mochila negra":
                     precio = 698;
                     break;
                 case "billetera":
@@ -48,6 +50,12 @@ while(seleccion != "si" && seleccion != "no"){
                 case "tarjetero":
                     precio = 500;
                     break;
+                case "mochila marron":
+                    precio = 698;
+                    break;
+                case "llavero":
+                        precio = 100;
+                        break;
                 default:
                     break;
             }
@@ -63,16 +71,16 @@ while(seleccion != "si" && seleccion != "no"){
         while (seleccion === "no"){
             alert ("Gracias por elegirnos, éste es el resumen de su compra:")
             carrito.forEach(carritoFinal =>{
-                alert(`Producto: ${carritoFinal.producto},Unidades: ${carritoFinal.unidades},
+                alert(`Producto: ${carritoFinal.producto} Unidades: ${carritoFinal.unidades}
                 Precio: $ ${carritoFinal.precio}
-                , Subtotal Producto: $ ${carritoFinal.unidades * carritoFinal.precio}`)
+                Subtotal Producto: $ ${carritoFinal.unidades * carritoFinal.precio}`)
             })
             break;
         }   
     }
     const total = carrito.reduce((total, producto) => total + producto.precio * producto.unidades,0)
     alert (`El total a pagar por su compra es: $ ${total}`);
- */
+
 
 
 

@@ -1,12 +1,43 @@
 body{
-    background-color: aqua;
+    background-color: antiquewhite;
 }
 
 h1{
     background-color: blue;
 }
 
-.foto__buzo{
-    height: 100px;
-    width: 100px;
+
+/* INDEX */
+
+.portada__limon{
+    height: 80vh;
+    width: 100%;
+    padding: 20px 50px 0px 50px;
+    text-align: center;
 }
+
+.titulo-limon{
+    font-size: 50px;
+}
+
+.card1{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: white;
+    font-size: 18px;
+}
+
+
+
+
