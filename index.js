@@ -1,4 +1,4 @@
-const productos = [
+/* const productos = [
     {nombre:"porta celular", precio:50},
     {nombre:"cartera", precio:788},
     {nombre:"mochila", precio:698},
@@ -72,7 +72,7 @@ while(seleccion != "si" && seleccion != "no"){
     }
     const total = carrito.reduce((total, producto) => total + producto.precio * producto.unidades,0)
     alert (`El total a pagar por su compra es: $ ${total}`);
-
+ */
 
 
 

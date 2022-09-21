@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+
+h1{
+    background-color: blue;
+}
+
+.foto__buzo{
+    height: 100px;
+    width: 100px;
+}
