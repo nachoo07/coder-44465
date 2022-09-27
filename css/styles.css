@@ -21,10 +21,7 @@ h1{
 }
 
 .card1{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 20px;
+    padding: 20px 0px 20px 40px;
 }
 
 .card-title{
@@ -36,7 +33,12 @@ h1{
     background-color: black;
     border: white;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
 
 
 

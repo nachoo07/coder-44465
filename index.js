@@ -1,12 +1,12 @@
 const productos = [
-    {nombre:"porta celular", precio:50, img:imagenes/portacelular.png},
-    {nombre:"cartera", precio:788, img:imagenes/cartera.png},
-    {nombre:"mochila negra", precio:698, img:imagenes/mochilanegra.png},
-    {nombre:"mochila marron", precio:698, img:imagenes/mochilamarron.png},
-    {nombre:"llavero", precio:100, img:imagenes/llavero.png},
-    {nombre:"bandolera", precio:874, img:imagenes/bandolera.png},
-    {nombre:"sobre", precio:566, img:imagenes/sobre.png},
-    {nombre:"tarjetero", precio:500, img:imagenes/tarjetero.png}
+    {nombre:"Porta Celular", precio:50, img:`../imagenes/portacelular.png`},
+    {nombre:"Cartera", precio:788,img:`../imagenes/cartera.png`},
+    {nombre:"Mochila negra", precio:698, img:`../imagenes/mochilanegra.png`},
+    {nombre:"Mochila marron", precio:698, img:`../imagenes/mochilamarron.png`},
+    {nombre:"Llavero", precio:100, img:`../imagenes/llavero.png`},
+    {nombre:"Bandolera", precio:874, img:`../imagenes/bandolera.png`},
+    {nombre:"Sobre", precio:566, img:`../imagenes/sobre.png`},
+    {nombre:"Tarjetero", precio:500, img:`../imagenes/tarjetero.png`}
 ];
 
 
@@ -81,31 +81,23 @@ while(seleccion != "si" && seleccion != "no"){
     const total = carrito.reduce((total, producto) => total + producto.precio * producto.unidades,0)
     alert (`El total a pagar por su compra es: $ ${total}`);
 
-
-
-    productos.forEach((producto) => {
-        let card = document.querySelector(".card")
-        let div = document.createElement("div")
-
-        div.innerHTML = `
-        <img src="${productos.img}">
-        <h5>${productos.nombre}</h5>
-        <button class=".btn">Agregar al Carrito</button>
+    const div = document.getElementById("div")
+    
+    productos.forEach(producto => {
+        let productosredenrizado = document.createElement("div")
+        productosredenrizado.innerHTML = `
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${producto.img}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <p class="card-title">$${producto.precio}</p>
+                    <a class="btn btn-primary">COMPRAR</a>
+                </div>
+        </div>
         `
-        div.classname = ".card1"
-        card.append(div)
+        div.append(productosredenrizado)
     })
 
 
-/*     <div class="card" style="width: 18rem;">
-    <img src="../imagenes/llavero.png" class="card-img-top" alt="...">
-    <div class="card-body card-title">
-    <h5>Llavero Limon</h5>
-    <a href="#" class="btn btn-primary">Agregar al carrito</a>
-    </div> */
-
-
-
-/*     <p>$${productos.precio}</p> */
 
 
