@@ -30,12 +30,27 @@
             </div>
             </div>
             <div>
-                <button id="boton">CARRITO</button>
-            </div>
         </nav>
     </header>
-    <main >
-        <div id="div" class=" card1 row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"></div>
+
+    <main id="contenedor-productos">
+
+        <button class="btn btn-primary" data-toggle="modal" data-target="#contenedor-modal">abrir modal</button>
+        <!-- modal contenido -->
+        <div class="modal fade" id="contenedor-modal" tabindex="-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">titulo del modal</h2>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis omnis provident maxime illo quasi qui eum animi? Eligendi possimus perferendis ipsa voluptates ut nam voluptatibus, a architecto libero commodi!</p>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                    <button class="btn btn-primary">GUARDAR</button>
+                </div>
+            </div>
+        </div>
     </main>
         <footer class="bg-light text-center text-white">
         <!-- Grid container -->
@@ -60,7 +75,7 @@
             </div>
             <!-- Copyright -->
     </footer>
-    <script src="../index.js"></script>
+    <script src="../productos.js"></script>
         <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
