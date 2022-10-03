@@ -12,7 +12,6 @@ const stockProductos = [
 const contenedorProductos = document.getElementById(`contenedor-productos`)
 
 
-
 let carrito = []
 
 stockProductos.forEach((producto) => {
