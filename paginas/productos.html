@@ -30,50 +30,38 @@
             </div>
             </div>
             <div>
+                        <!-- CARRITO Y CONTADOR -->
+                <button type="button" class="boton-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="img-carrito" src="../imagenes/carrito.png">
+                    <span class="contador" id="contadorCarrito">0</span>
+                </button>
+                        <!-- CARRITO Y CONTADOR -->
         </nav>
     </header>
-<!--     <button class="btn btn-primary" data-toggle="modal" data-target="#contenedor-modal">abrir modal</button>
-    <div class="modal fade" id="contenedor-modal" tabindex="-1">
+
+    <main class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 " id="contenedor-productos" >
+
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
         <div class="modal-content">
+                        <!-- encabezado del modal -->
             <div class="modal-header">
-                <h2 class="modal-title">titulo del modal</h2>
-                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis omnis provident maxime illo quasi qui eum animi? Eligendi possimus perferendis ipsa voluptates ut nam voluptatibus, a architecto libero commodi!</p>
+                        <!-- encabezado del modal -->
+                        <!-- cuerpo del modal -->
+            <div  id="carrito-contenedor"></div>
+            
+                        <!-- cuerpo del modal -->
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-                <button class="btn btn-primary">GUARDAR</button>
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" type="button" class="boton-agregar">vaciar carrito</button>
             </div>
         </div>
-    </div> -->
-
-
-
-    <main id="contenedor-productos">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          hola como estas
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
     </main>
         <footer class="bg-light text-center text-white">
         <!-- Grid container -->

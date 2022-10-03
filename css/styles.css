@@ -23,10 +23,15 @@ h1{
 .card1{
 
     margin-right: 0px;
+    padding-right: 0px;
 }
 
 .card-title{
     text-align: center;
+}
+
+.card-body{
+    padding-right: 0px;
 }
 
 .btn{
@@ -38,7 +43,85 @@ h1{
 
 .card {
     margin: 30px 30px 30px 30px;
+    padding: 0px 0px 0px 0px;
 }
+
+.precioProducto {
+    font-weight: 700;
+}
+
+.boton-agregar {
+    background-color: royalblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+}
+.boton-agregar:hover {
+    cursor: pointer;
+}
+.boton-agregar:focus {
+    outline: none;
+}
+
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid royalblue;
+}
+
+.info {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.boton-eliminar {
+    height: 20px;
+    border: none;
+    background-color: white;
+}
+
+.boton-carrito {
+    background-color: white;
+    border: none;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.contador {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.img-carrito {
+    height: 40px;
+    width: 40px;
+
+}
+
 
 .card-body{
     display: flex;
@@ -52,6 +135,8 @@ h1{
     height: 40px;
     border-radius: 30px;
 }
+
+
 
 
 
