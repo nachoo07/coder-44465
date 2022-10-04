@@ -90,8 +90,6 @@ const actualizarCarrito = () => {
                 <p>Precio: ${prod.precio}</p>
                 <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
                 <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><img class="img-carrito" src="../imagenes/basura.png"></button>
-
-
         `
         contenedorCarrito.appendChild(div)
 
