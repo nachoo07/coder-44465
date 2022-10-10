@@ -33,14 +33,15 @@ botonVaciar.addEventListener("click" , () => {
 })
 
 stockProductos.forEach((producto) => {
+    const {img, nombre, precio, id} = producto
     const div = document.createElement("div")
     div.innerHTML = `
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="${producto.img}" alt="Card image cap">
+    <img class="card-img-top" src="${img}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-title">$${producto.precio}</p>
-            <button class= btn id=${producto.id}>Comprar</button>
+            <h5 class="card-title">${nombre}</h5>
+            <p class="card-title">$${precio}</p>
+            <button class= btn id=${id}>Comprar</button>
         </div>
     </div>
     `
@@ -65,7 +66,10 @@ const agregarAlCarrito = (prodId) => {
         })
     }else {
             const item = stockProductos.find((prod) => prod.id === prodId)
-    carrito.push(item)
+    carrito.push({
+        ...item,
+        cantidad: 1,
+    })
     console.log(carrito);
     }
     actualizarCarrito()
@@ -83,13 +87,14 @@ const eliminarDelCarrito = (prodId) => {
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
     carrito.forEach((prod) => {
+        const {nombre, precio, cantidad, id}= prod
         const div = document.createElement("div")
         div.className = (`productoEnCarrito`)
         div.innerHTML = `
-                <p>${prod.nombre}</p>
-                <p>Precio: ${prod.precio}</p>
-                <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-                <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><img class="img-carrito" src="../imagenes/basura.png"></button>
+                <p>${nombre}</p>
+                <p>Precio: ${precio}</p>
+                <p>Cantidad: <span id="cantidad">${cantidad}</span></p>
+                <button onclick="eliminarDelCarrito(${id})" class="boton-eliminar"><img class="img-carrito" src="../imagenes/basura.png"></button>
         `
         contenedorCarrito.appendChild(div)
 
