@@ -50,10 +50,15 @@ stockProductos.forEach((producto) => {
     const boton = document.getElementById(`${producto.id}`)
     boton.addEventListener("click" , () =>{
         agregarAlCarrito(producto.id)
+        Toastify({
+            text: "Agregaste este producto al carrito",
+            className: "info",
+        }).showToast();
+    });
     })
 
 
-})
+
 
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId)
@@ -104,3 +109,10 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length
     precioTotal.innerText = carrito.reduce((acc , prod) => acc + prod.precio, 0)
 }
+
+
+
+
+
+
+
