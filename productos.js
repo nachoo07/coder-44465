@@ -1,4 +1,13 @@
-
+stockProductos = [
+    {id:1 ,nombre:"Porta Celular", precio:2500, img:`../imagenes/portacelular.png`, cantidad:1},
+    {"id":2 ,"nombre":"Cartera", "precio":5000, "img":"../imagenes/cartera.png", "cantidad":1},
+    {"id":3 ,"nombre":"Mochila negra", "precio":4500,  "img":"../imagenes/mochilanegra.png", "cantidad":1},
+    {"id":4 ,"nombre":"Mochila marron", "precio":4500,  "img":"../imagenes/mochilamarron.png", "cantidad":1},
+    {"id":5 ,"nombre":"Llavero", "precio":600,  "img":"../imagenes/llavero.png", "cantidad":1},
+    {"id":6 ,"nombre":"Bandolera", "precio":3500,  "img":"../imagenes/bandolera.png", "cantidad":1},
+    {"id":7 ,"nombre":"Sobre", "precio":2750,  "img":"../imagenes/sobre.png", "cantidad":1},
+    {"id":8 ,"nombre":"Tarjetero", "precio":1250,  "img":"../imagenes/tarjetero.png", "cantidad":1}
+]
 
 const contenedorProductos = document.getElementById(`contenedor-productos`)
 const contenedorCarrito = document.getElementById(`carrito-contenedor`)
@@ -23,35 +32,35 @@ botonVaciar.addEventListener("click" , () => {
     )
 })
 
-fetch("../data.json")
+
+
+fetch("../data.JSON")
 .then(response => response.json())
-.then(data => {
-    data.forEach(producto => {
-        const {img, nombre, precio, id} = producto
-        const div = document.createElement("div")
-        div.innerHTML = `
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="${img}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${nombre}</h5>
-                <p class="card-title">$${precio}</p>
-                <button class= btn id=${id}>Comprar</button>
-            </div>
+.then(data => { data.forEach ((producto) => {
+    const {img, nombre, precio, id} = producto
+    const div = document.createElement("div")
+    div.innerHTML = `
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="${img}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">${nombre}</h5>
+            <p class="card-title">$${precio}</p>
+            <button class= btn id=${id}>Comprar</button>
         </div>
-        `
-        contenedorProductos.appendChild(div);
+    </div>
+    `
+    contenedorProductos.appendChild(div);
 
-        const boton = document.getElementById(`${producto.id}`)
-        boton.addEventListener("click" , () =>{
-            agregarAlCarrito(producto.id)
-            Toastify({
-                text: "Agregaste este producto al carrito",
-                className: "info",
-            }).showToast();
-    });
+    const boton = document.getElementById(`${producto.id}`)
+    boton.addEventListener("click" , () =>{
+        agregarAlCarrito(producto.id)
+        Toastify({
+            text: "Agregaste este producto al carrito",
+            className: "info",
+        }).showToast();
+});
 })
-})
-
+});
 
 
 
