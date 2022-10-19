@@ -25,7 +25,8 @@ botonVaciar.addEventListener("click" , () => {
 
 fetch("../data.json")
 .then(response => response.json())
-.then(data => {data.forEach(producto => {
+.then(data => {
+    data.forEach(producto => {
         const {img, nombre, precio, id} = producto
         const div = document.createElement("div")
         div.innerHTML = `
@@ -39,17 +40,22 @@ fetch("../data.json")
         </div>
         `
         contenedorProductos.appendChild(div);
+
+        const boton = document.getElementById(`${producto.id}`)
+        boton.addEventListener("click" , () =>{
+            agregarAlCarrito(producto.id)
+            Toastify({
+                text: "Agregaste este producto al carrito",
+                className: "info",
+            }).showToast();
+    });
 })
 })
 
-const boton = document.getElementById(`${producto.id}`)
-boton.addEventListener("click" , () =>{
-    agregarAlCarrito(producto.id)
-    Toastify({
-        text: "Agregaste este producto al carrito",
-        className: "info",
-    }).showToast();
-    });
+
+
+
+
 
 
 const agregarAlCarrito = (prodId) => {
@@ -101,4 +107,10 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length
     precioTotal.innerText = carrito.reduce((acc , prod) => acc + prod.precio, 0)
 }
+
+
+
+
+
+
 
