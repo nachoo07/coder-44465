@@ -67,7 +67,7 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     }else {
-            const item = stockProductos.find((prod) => prod.id === prodId)
+            const item = data.json.find((prod) => prod.id === prodId)
     carrito.push({
         ...item,
         cantidad: 1,
