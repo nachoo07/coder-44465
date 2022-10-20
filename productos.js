@@ -50,14 +50,9 @@ fetch("../data.json")
         }).showToast();
 });
 })
-});
-
-
-
-
-
 
 const agregarAlCarrito = (prodId) => {
+    
     const existe = carrito.some (prod => prod.id === prodId)
 
     if(existe){
@@ -67,7 +62,7 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     }else {
-            const item = data.json.find((prod) => prod.id === prodId)
+            const item = data.find((prod) => prod.id === prodId)
     carrito.push({
         ...item,
         cantidad: 1,
@@ -76,6 +71,15 @@ const agregarAlCarrito = (prodId) => {
     }
     actualizarCarrito()
 }
+
+});
+
+
+
+
+
+
+
 
 
 const eliminarDelCarrito = (prodId) => {
